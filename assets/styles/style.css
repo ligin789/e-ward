@@ -1,1 +1,20 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Gilroy_R";
+  src: url(../fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy_M";
+  src: url(../fonts/Gilroy-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy_B";
+  src: url(../fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Gilroy_SB";
+  src: url(../fonts/Gilroy-SemiBold.ttf);
+}
+/*# sourceMappingURL=style.css.map */
