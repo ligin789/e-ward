@@ -41,16 +41,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .main .sections .content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-left: 124px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,16 +67,41 @@
   width: 852px;
   font-weight: 500;
   line-height: 36px;
+  color: #1e1e1e;
 }
 
 .main .sections .content .connection {
   width: 872px;
 }
 
-.main .sections .form {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-left: 180px;
+.main .sections .form .box {
+  width: 556px;
+  padding: 62px 48px 70px 48px;
+  background: #fff;
+  -webkit-box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.04), 20px 40px 80px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.04), 20px 40px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.main .sections .form .box .login-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 12px;
+}
+
+.main .sections .form .box .login-text .title {
+  font-family: "Gilroy_B";
+  font-size: 36px;
+}
+
+.main .sections .form .box .login-text .sub-title {
+  font-family: "Gilroy_M";
+  font-size: 16px;
+  color: #8b8b8b;
 }
 /*# sourceMappingURL=style.css.map */

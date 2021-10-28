@@ -25,7 +25,21 @@
                     <img src="./assets/images/connections.png" alt="Connections">
                 </div>
             </div>
-            <div class="form">wer</div>
+            <div class="form">
+                <div class="box">
+                    <div class="login-text">
+                        <div class="title">
+                            Login to continue
+                        </div>
+                        <div class="sub-title">
+                            A web-based application for managing your ward.
+                        </div>
+                    </div>
+                    <form action="#">
+                        
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 </body>

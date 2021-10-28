@@ -25,6 +25,7 @@ $text: #1e1e1e;
 $subText: #8b8b8b;
 $placeholder: #b1b1b1;
 $border: #c1c1c1;
+$white: #fff;
 
 //Primary Style
 * {
@@ -43,10 +44,9 @@ $border: #c1c1c1;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     .content {
-      flex: 1;
-      margin-left: 124px;
+      //
       display: flex;
       flex-direction: column;
       row-gap: 26px;
@@ -59,14 +59,36 @@ $border: #c1c1c1;
         width: 852px;
         font-weight: 500;
         line-height: 36px;
+        color: $text;
       }
-      .connection{
-        width:872px;
+      .connection {
+        width: 872px;
       }
     }
     .form {
-      flex: 1;
-      margin-left: 180px;
+      //
+      .box {
+        width: 556px;
+        padding: 62px 48px 70px 48px;
+        background: $white;
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.04),
+          20px 40px 80px rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+        .login-text {
+          display: flex;
+          flex-direction: column;
+          row-gap: 12px;
+          .title {
+            font-family: "Gilroy_B";
+            font-size: 36px;
+          }
+          .sub-title {
+            font-family: "Gilroy_M";
+            font-size: 16px;
+            color: $subText;
+          }
+        }
+      }
     }
   }
 }
