@@ -18,6 +18,22 @@
   src: url(../fonts/Gilroy-SemiBold.ttf);
 }
 
+::-webkit-input-placeholder {
+  color: #b1b1b1;
+}
+
+:-ms-input-placeholder {
+  color: #b1b1b1;
+}
+
+::-ms-input-placeholder {
+  color: #b1b1b1;
+}
+
+::placeholder {
+  color: #b1b1b1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -312,21 +328,5 @@
   -webkit-transform: scale(0.99);
           transform: scale(0.99);
   background: #f4f3ff;
-}
-
-::-webkit-input-placeholder {
-  color: #b1b1b1;
-}
-
-:-ms-input-placeholder {
-  color: #b1b1b1;
-}
-
-::-ms-input-placeholder {
-  color: #b1b1b1;
-}
-
-::placeholder {
-  color: #b1b1b1;
 }
 /*# sourceMappingURL=style.css.map */

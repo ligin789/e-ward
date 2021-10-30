@@ -1,150 +1,5 @@
-//Fonts
-@font-face {
-  font-family: "Gilroy_R";
-  src: url(../fonts/Gilroy-Regular.ttf);
-}
-
-@font-face {
-  font-family: "Gilroy_M";
-  src: url(../fonts/Gilroy-Medium.ttf);
-}
-
-@font-face {
-  font-family: "Gilroy_B";
-  src: url(../fonts/Gilroy-Bold.ttf);
-}
-
-@font-face {
-  font-family: "Gilroy_SB";
-  src: url(../fonts/Gilroy-SemiBold.ttf);
-}
-
-//Colors
-$primary: #5744e3;
-$text: #1e1e1e;
-$subText: #8b8b8b;
-$placeholder: #b1b1b1;
-$border: #c1c1c1;
-$white: #fff;
-
-//Mixins
-
-//input Fields
-@mixin input_fields($width) {
-  .input {
-    width: $width;
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-    .label {
-      font-size: 16px;
-      font-family: "Gilroy_M";
-    }
-    input[type="text"] {
-      width: 100%;
-      font-size: 18px;
-      font-family: "Gilroy_M";
-      padding: 16px 0px 16px 16px;
-      border-radius: 10px;
-      border: 1px solid $border;
-      color: $text;
-      outline: none;
-      transition: 0.2s ease-in-out;
-      &:focus {
-        border: 1px solid $text;
-      }
-    }
-  }
-}
-
-//Primary Button
-@mixin primary_button($width) {
-  background: $primary;
-  color: #fff;
-  font-family: "Gilroy_B";
-  font-size: 18px;
-  padding: 16px 0;
-  border: none;
-  outline: none;
-  width: $width;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.1s ease-in-out;
-  &:active {
-    transform: scale(0.99);
-    background: #6756eb;
-  }
-}
-
-//Secondary Button
-@mixin secondary_button($width) {
-  background: #fff;
-  color: $primary;
-  font-family: "Gilroy_B";
-  font-size: 18px;
-  padding: 16px 0;
-  border: 2px solid $primary;
-  outline: none;
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.1s ease-in-out;
-  &:active {
-    transform: scale(0.99);
-    background: #f4f3ff;
-  }
-}
-
-//Checkbox
-@mixin checkbox() {
-  .checkbox {
-    display: flex;
-    column-gap: 8px;
-    transition: 1s ease-in-out;
-    input[type="checkbox"] {
-      appearance: none;
-      height: 18px;
-      width: 18px;
-      border-radius: 4px;
-      border: 1px solid #888888;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      outline: none;
-      &:after {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        content: "\f00c";
-        font-size: 12px;
-        color: #fff;
-        display: none;
-      }
-      &:checked {
-        background: $primary;
-        border: 1px solid $primary;
-      }
-      &:checked:after {
-        display: block;
-      }
-    }
-
-    label {
-      font-family: "Gilroy_M";
-      font-size: 16px;
-      color: $text;
-      cursor: pointer;
-      user-select: none;
-    }
-  }
-}
-
-//Primary Style
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+//Components
+@import "./components.scss";
 
 .main {
   background-image: url("../images/bg.png");
@@ -158,7 +13,6 @@ $white: #fff;
     align-items: center;
     justify-content: space-evenly;
     .content {
-      //
       display: flex;
       flex-direction: column;
       row-gap: 26px;
@@ -251,8 +105,4 @@ $white: #fff;
       }
     }
   }
-}
-
-::placeholder {
-  color: $placeholder;
 }
