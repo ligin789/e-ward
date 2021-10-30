@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Ward | Login</title>
     <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <section class="main">
@@ -36,7 +37,36 @@
                         </div>
                     </div>
                     <form action="#">
-                        
+                        <div class="inputs">
+                            <div class="input">
+                                <div class="label">
+                                    Username
+                                </div>
+                                <input type="text" name="" id="" placeholder="House no./committe no.">
+                            </div>
+                            <div class="input">
+                                <div class="label">
+                                    Password
+                                </div>
+                                <input type="text" name="" id="" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="sub">
+                            <div class="checkbox">
+                                <input type="checkbox" name="" id="check" checked>
+                                <label for="check">Remember me</label>
+                            </div>
+                                <a href="#" class="forgot">Forgot password</a>
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" value="Login" class="primary-button">
+                            <div class="or">
+                                <div class="line"></div>
+                                <span>Or</span>
+                                <div class="line"></div>
+                            </div>
+                            <input type="button" value="Register" class="secondary-button">
+                        </div>
                     </form>
                 </div>
             </div>

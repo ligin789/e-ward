@@ -27,6 +27,35 @@ $placeholder: #b1b1b1;
 $border: #c1c1c1;
 $white: #fff;
 
+//Mixins
+//input Fields
+@mixin input_fields($width) {
+  .input {
+    width: $width;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    .label {
+      font-size: 16px;
+      font-family: "Gilroy_M";
+    }
+    input[type="text"] {
+      width: 100%;
+      font-size: 18px;
+      font-family: "Gilroy_M";
+      padding: 16px 0px 16px 16px;
+      border-radius: 10px;
+      border: 1px solid $border;
+      color: $text;
+      outline: none;
+      transition: 0.5s;
+      &:focus {
+        border: 1px solid $text;
+      }
+    }
+  }
+}
+
 //Primary Style
 * {
   margin: 0;
@@ -88,7 +117,132 @@ $white: #fff;
             color: $subText;
           }
         }
+        .inputs {
+          display: flex;
+          flex-direction: column;
+          row-gap: 32px;
+          margin-top: 40px;
+          @include input_fields(460px);
+        }
+        .sub {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 18px;
+          .forgot {
+            font-family: "Gilroy_M";
+            font-size: 16px;
+            color: $primary;
+            user-select: none;
+            text-decoration: none;
+          }
+        }
+        .buttons {
+          margin-top: 32px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 28px;
+          .or {
+            font-family: "Gilroy_M";
+            font-weight: 500;
+            font-size: 16px;
+            color: $text;
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            user-select: none;
+            .line {
+              height: 1px;
+              width: 210px;
+              background: #c4c4c4;
+            }
+          }
+        }
       }
     }
   }
+}
+
+//Checkbox
+.checkbox {
+  display: flex;
+  column-gap: 8px;
+  transition: 1s ease-in-out;
+  input[type="checkbox"] {
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 4px;
+    border: 1px solid #888888;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    &:after {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 600;
+      content: "\f00c";
+      font-size: 12px;
+      color: #fff;
+      display: none;
+    }
+    &:checked {
+      background: $primary;
+      border: 1px solid $primary;
+    }
+    &:checked:after {
+      display: block;
+    }
+  }
+
+  label {
+    font-family: "Gilroy_M";
+    font-size: 16px;
+    color: $text;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+//Primary Button
+.primary-button {
+  background: $primary;
+  color: #fff;
+  font-family: "Gilroy_B";
+  font-size: 18px;
+  padding: 16px 0;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  &:active {
+    transform: scale(0.97);
+    background: #6756eb;
+  }
+}
+
+//Secondary Button
+.secondary-button {
+  background: #fff;
+  color: $primary;
+  font-family: "Gilroy_B";
+  font-size: 18px;
+  padding: 16px 0;
+  border: 2px solid $primary;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  &:active {
+    transform: scale(0.97);
+    background: #f4f3ff;
+  }
+}
+
+::placeholder {
+  color: $placeholder;
 }
