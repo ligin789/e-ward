@@ -143,8 +143,8 @@
   border: 1px solid #c1c1c1;
   color: #1e1e1e;
   outline: none;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .main .sections .form .box .inputs .input input[type="text"]:focus {
@@ -288,8 +288,8 @@
 }
 
 .primary-button:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
   background: #6756eb;
 }
 
@@ -309,8 +309,8 @@
 }
 
 .secondary-button:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
   background: #f4f3ff;
 }
 

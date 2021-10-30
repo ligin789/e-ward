@@ -48,7 +48,7 @@ $white: #fff;
       border: 1px solid $border;
       color: $text;
       outline: none;
-      transition: 0.5s;
+      transition: 0.2s ease-in-out;
       &:focus {
         border: 1px solid $text;
       }
@@ -219,7 +219,7 @@ $white: #fff;
   cursor: pointer;
   transition: 0.1s ease-in-out;
   &:active {
-    transform: scale(0.97);
+    transform: scale(0.99);
     background: #6756eb;
   }
 }
@@ -238,7 +238,7 @@ $white: #fff;
   cursor: pointer;
   transition: 0.1s ease-in-out;
   &:active {
-    transform: scale(0.97);
+    transform: scale(0.99);
     background: #f4f3ff;
   }
 }
