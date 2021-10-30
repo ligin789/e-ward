@@ -161,6 +161,66 @@
   margin-top: 18px;
 }
 
+.main .sections .form .box .sub .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.main .sections .form .box .sub .checkbox input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 4px;
+  border: 1px solid #888888;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+}
+
+.main .sections .form .box .sub .checkbox input[type="checkbox"]:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f00c";
+  font-size: 12px;
+  color: #fff;
+  display: none;
+}
+
+.main .sections .form .box .sub .checkbox input[type="checkbox"]:checked {
+  background: #5744e3;
+  border: 1px solid #5744e3;
+}
+
+.main .sections .form .box .sub .checkbox input[type="checkbox"]:checked:after {
+  display: block;
+}
+
+.main .sections .form .box .sub .checkbox label {
+  font-family: "Gilroy_M";
+  font-size: 16px;
+  color: #1e1e1e;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .main .sections .form .box .sub .forgot {
   font-family: "Gilroy_M";
   font-size: 16px;
@@ -185,6 +245,27 @@
       -ms-flex-align: center;
           align-items: center;
   row-gap: 28px;
+}
+
+.main .sections .form .box .buttons .primary-button {
+  background: #5744e3;
+  color: #fff;
+  font-family: "Gilroy_B";
+  font-size: 18px;
+  padding: 16px 0;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.main .sections .form .box .buttons .primary-button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+  background: #6756eb;
 }
 
 .main .sections .form .box .buttons .or {
@@ -212,88 +293,7 @@
   background: #c4c4c4;
 }
 
-.checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 8px;
-          column-gap: 8px;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-}
-
-.checkbox input[type="checkbox"] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  height: 18px;
-  width: 18px;
-  border-radius: 4px;
-  border: 1px solid #888888;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  outline: none;
-}
-
-.checkbox input[type="checkbox"]:after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 600;
-  content: "\f00c";
-  font-size: 12px;
-  color: #fff;
-  display: none;
-}
-
-.checkbox input[type="checkbox"]:checked {
-  background: #5744e3;
-  border: 1px solid #5744e3;
-}
-
-.checkbox input[type="checkbox"]:checked:after {
-  display: block;
-}
-
-.checkbox label {
-  font-family: "Gilroy_M";
-  font-size: 16px;
-  color: #1e1e1e;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.primary-button {
-  background: #5744e3;
-  color: #fff;
-  font-family: "Gilroy_B";
-  font-size: 18px;
-  padding: 16px 0;
-  border: none;
-  outline: none;
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
-}
-
-.primary-button:active {
-  -webkit-transform: scale(0.99);
-          transform: scale(0.99);
-  background: #6756eb;
-}
-
-.secondary-button {
+.main .sections .form .box .buttons .secondary-button {
   background: #fff;
   color: #5744e3;
   font-family: "Gilroy_B";
@@ -308,7 +308,7 @@
   transition: 0.1s ease-in-out;
 }
 
-.secondary-button:active {
+.main .sections .form .box .buttons .secondary-button:active {
   -webkit-transform: scale(0.99);
           transform: scale(0.99);
   background: #f4f3ff;
