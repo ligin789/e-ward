@@ -66,7 +66,7 @@
                                 <span>Or</span>
                                 <div class="line"></div>
                             </div>
-                            <input type="button" value="Register" class="secondary-button">
+                            <input type="button" value="Register" id="register" class="secondary-button">
                         </div>
                     </form>
                 </div>

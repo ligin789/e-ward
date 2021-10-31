@@ -1,6 +1,6 @@
 //Login & Register Switch
 
-const regBtn=document.querySelector(".secondary-button");
+const regBtn=document.querySelector("#register");
 const logBtn=document.querySelector(".box2 a");
 const box1=document.querySelector(".box");
 const box2=document.querySelector(".box2");
