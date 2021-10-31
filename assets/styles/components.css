@@ -18,6 +18,11 @@
   src: url(../fonts/Gilroy-SemiBold.ttf);
 }
 
+@font-face {
+  font-family: "Gilroy_Italics_M";
+  src: url(../fonts/Gilroy-MediumItalic.ttf);
+}
+
 ::-webkit-input-placeholder {
   color: #b1b1b1;
 }

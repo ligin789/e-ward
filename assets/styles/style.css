@@ -18,6 +18,11 @@
   src: url(../fonts/Gilroy-SemiBold.ttf);
 }
 
+@font-face {
+  font-family: "Gilroy_Italics_M";
+  src: url(../fonts/Gilroy-MediumItalic.ttf);
+}
+
 ::-webkit-input-placeholder {
   color: #b1b1b1;
 }
@@ -97,6 +102,8 @@
   -webkit-box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.04), 20px 40px 80px rgba(0, 0, 0, 0.1);
           box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.04), 20px 40px 80px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .main .sections .form .box .login-text {
@@ -328,5 +335,201 @@
   -webkit-transform: scale(0.99);
           transform: scale(0.99);
   background: #f4f3ff;
+}
+
+.box2 {
+  opacity: 0;
+  display: none;
+  width: 556px;
+  padding: 62px 48px 70px 48px;
+  background: #fff;
+  -webkit-box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.04), 20px 40px 80px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.04), 20px 40px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.box2 .register-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 12px;
+}
+
+.box2 .register-text .title {
+  font-family: "Gilroy_B";
+  font-size: 36px;
+}
+
+.box2 .register-text .sub-title {
+  font-family: "Gilroy_M";
+  font-size: 16px;
+  color: #8b8b8b;
+}
+
+.box2 .register-text .sub-title a {
+  margin-left: 6px;
+  font-family: "Gilroy_M";
+  font-size: 16px;
+  color: #5744e3;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-decoration: none;
+}
+
+.box2 .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 32px;
+  margin-top: 40px;
+}
+
+.box2 .inputs .input {
+  width: 460px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 8px;
+}
+
+.box2 .inputs .input .label {
+  font-size: 16px;
+  font-family: "Gilroy_M";
+}
+
+.box2 .inputs .input input[type="text"] {
+  width: 100%;
+  font-size: 18px;
+  font-family: "Gilroy_M";
+  padding: 16px 0px 16px 16px;
+  border-radius: 10px;
+  border: 1px solid #c1c1c1;
+  color: #1e1e1e;
+  outline: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.box2 .inputs .input input[type="text"]:focus {
+  border: 1px solid #1e1e1e;
+}
+
+.box2 .inputs .half-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.box2 .inputs .half-input .input {
+  width: 216px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 8px;
+}
+
+.box2 .inputs .half-input .input .label {
+  font-size: 16px;
+  font-family: "Gilroy_M";
+}
+
+.box2 .inputs .half-input .input input[type="text"] {
+  width: 100%;
+  font-size: 18px;
+  font-family: "Gilroy_M";
+  padding: 16px 0px 16px 16px;
+  border-radius: 10px;
+  border: 1px solid #c1c1c1;
+  color: #1e1e1e;
+  outline: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.box2 .inputs .half-input .input input[type="text"]:focus {
+  border: 1px solid #1e1e1e;
+}
+
+.box2 .button .primary-button {
+  background: #5744e3;
+  color: #fff;
+  font-family: "Gilroy_B";
+  font-size: 18px;
+  padding: 16px 0;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.box2 .button .primary-button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+  background: #6756eb;
+}
+
+.box2 .message {
+  font-family: "Gilroy_Italics_M";
+  font-size: 14px;
+  margin-top: -8px;
+}
+
+.box-visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  pointer-events: visible;
+  display: block;
+}
+
+.box-hide {
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  pointer-events: none;
+  display: none;
+}
+
+.box2-visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  pointer-events: visible;
+  display: block;
+}
+
+.box2-hide {
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  pointer-events: none;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

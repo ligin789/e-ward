@@ -57,7 +57,7 @@
                                 <input type="checkbox" name="" id="check" checked>
                                 <label for="check">Remember me</label>
                             </div>
-                                <a href="#" class="forgot">Forgot password</a>
+                                <a href="#" class="forgot">Forgot password?</a>
                         </div>
                         <div class="buttons">
                             <input type="submit" value="Login" class="primary-button">
@@ -70,8 +70,67 @@
                         </div>
                     </form>
                 </div>
+                <div class="box2">
+                    <div class="register-text">
+                        <div class="title">
+                            Register your house
+                        </div>
+                        <div class="sub-title">
+                            Already have an account?<a>Login</a> 
+                        </div>
+                    </div>
+                    <form action="#">
+                        <div class="inputs">
+                            <div class="input">
+                                <div class="label">
+                                    Full name
+                                </div>
+                                <input type="text" name="" id="" placeholder="John Doe">
+                            </div>
+                            <div class="input">
+                                <div class="label">
+                                    Email ID
+                                </div>
+                                <input type="text" name="" id="" placeholder="example@gmail.com">
+                            </div>
+                            <div class="input">
+                                <div class="label">
+                                    Phone number
+                                </div>
+                                <input type="text" name="" id="" placeholder="9568547512">
+                            </div>
+                            <div class="half-input">
+                                <div class="input">
+                                    <div class="label">
+                                        Ward number
+                                    </div>
+                                    <input type="text" name="" id="" placeholder="25">
+                                </div>
+                                <div class="input">
+                                    <div class="label">
+                                        House number
+                                    </div>
+                                    <input type="text" name="" id="" placeholder="153">
+                                </div>
+                            </div>
+                            <div class="input">
+                                <div class="label">
+                                    Ration number
+                                </div>
+                                <input type="text" name="" id="" placeholder="2547863214">
+                            </div>
+                            <div class="button">
+                                <input type="submit" value="Register" class="primary-button">
+                            </div>
+                            <div class="message">
+                                *The login details will be sent to you via email or SMS.
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>
