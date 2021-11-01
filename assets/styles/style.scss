@@ -22,7 +22,9 @@
 }
 
 //Login. Register Switch
-@mixin switch($vis, $dis) {
+@mixin switch($op, $scale, $vis, $dis) {
+  opacity: $op;
+  transform: $scale;
   pointer-events: $vis;
   display: $dis;
 }
@@ -171,17 +173,17 @@
 
 .box-visible {
   //Pointer, Display
-  @include switch(visible, block);
+  @include switch(1, 1, visible, block);
 }
 
 .box-hide {
-  @include switch(none, none);
+  @include switch(0, 0.5, none, none);
 }
 
 .box2-visible {
-  @include switch(visible, block);
+  @include switch(1, 1, visible, block);
 }
 
 .box2-hide {
-  @include switch(none, none);
+  @include switch(0, 0.5, none, none);
 }
