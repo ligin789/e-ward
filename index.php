@@ -79,48 +79,62 @@
                             Already have an account?<a>Login</a> 
                         </div>
                     </div>
-                    <form action="#">
+                    <?php
+                        include './assets/includes/dbcon.php';
+                        if(isset($_POST["reg"])){
+                            $name=$_POST["fname"];
+                            $email=$_POST["email"];
+                            $phno=$_POST["phno"];
+                            $wardno=$_POST["wardno"];
+                            $houseno=$_POST["houseno"];
+                            $ration=$_POST["rationno"];
+
+                            $ins="INSERT INTO `registration`(`fname`, `email`, `phno`, `wardno`, `houseno`, `rationno`) VALUES ('$name','$email',' $phno','$wardno',' $houseno',' $ration')";
+                            mysqli_query($conn,$ins);
+                        }
+                    ?>
+                    <form action="#" method="post" enctype="multipart/form-data">
                         <div class="inputs">
                             <div class="input">
                                 <div class="label">
                                     Full name
                                 </div>
-                                <input type="text" name="" id="" placeholder="John Doe">
+                                <input type="text" name="fname" id="" placeholder="John Doe">
                             </div>
                             <div class="input">
                                 <div class="label">
                                     Email ID
                                 </div>
-                                <input type="text" name="" id="" placeholder="example@gmail.com">
+                                <input type="text" name="email" id="" placeholder="example@gmail.com">
                             </div>
                             <div class="input">
                                 <div class="label">
                                     Phone number
                                 </div>
-                                <input type="text" name="" id="" placeholder="9568547512">
+                                <input type="text" name="phno" id="" placeholder="9568547512">
                             </div>
                             <div class="half-input">
                                 <div class="input">
                                     <div class="label">
                                         Ward number
                                     </div>
-                                    <input type="text" name="" id="" placeholder="25">
+                                    <input type="text" name="wardno" id="" placeholder="25">
                                 </div>
                                 <div class="input">
                                     <div class="label">
                                         House number
                                     </div>
-                                    <input type="text" name="" id="" placeholder="153">
+                                    <input type="text" name="houseno" id="" placeholder="153">
                                 </div>
                             </div>
                             <div class="input">
                                 <div class="label">
                                     Ration number
                                 </div>
-                                <input type="text" name="" id="" placeholder="2547863214">
+                                <input type="text" name="rationno" id="" placeholder="2547863214">
                             </div>
                             <div class="button">
-                                <input type="submit" value="Register" class="primary-button">
+                                <input type="submit" name="reg" value="Register" class="primary-button">
                             </div>
                             <div class="message">
                                 *The login details will be sent to you via email or SMS.
