@@ -157,7 +157,8 @@
   font-family: "Gilroy_M";
 }
 
-.main .sections .form .box .inputs .input input[type="text"] {
+.main .sections .form .box .inputs .input input[type="text"],
+.main .sections .form .box .inputs .input input[type="password"] {
   width: 100%;
   font-size: 18px;
   font-family: "Gilroy_M";
@@ -170,7 +171,8 @@
   transition: 0.2s ease-in-out;
 }
 
-.main .sections .form .box .inputs .input input[type="text"]:focus {
+.main .sections .form .box .inputs .input input[type="text"]:focus,
+.main .sections .form .box .inputs .input input[type="password"]:focus {
   border: 1px solid #1e1e1e;
 }
 
@@ -415,7 +417,8 @@
   font-family: "Gilroy_M";
 }
 
-.box2 .inputs .input input[type="text"] {
+.box2 .inputs .input input[type="text"],
+.box2 .inputs .input input[type="password"] {
   width: 100%;
   font-size: 18px;
   font-family: "Gilroy_M";
@@ -428,7 +431,8 @@
   transition: 0.2s ease-in-out;
 }
 
-.box2 .inputs .input input[type="text"]:focus {
+.box2 .inputs .input input[type="text"]:focus,
+.box2 .inputs .input input[type="password"]:focus {
   border: 1px solid #1e1e1e;
 }
 
@@ -458,7 +462,8 @@
   font-family: "Gilroy_M";
 }
 
-.box2 .inputs .half-input .input input[type="text"] {
+.box2 .inputs .half-input .input input[type="text"],
+.box2 .inputs .half-input .input input[type="password"] {
   width: 100%;
   font-size: 18px;
   font-family: "Gilroy_M";
@@ -471,7 +476,8 @@
   transition: 0.2s ease-in-out;
 }
 
-.box2 .inputs .half-input .input input[type="text"]:focus {
+.box2 .inputs .half-input .input input[type="text"]:focus,
+.box2 .inputs .half-input .input input[type="password"]:focus {
   border: 1px solid #1e1e1e;
 }
 

@@ -87,13 +87,13 @@
                             $phno=$_POST["phno"];
                             $wardno=$_POST["wardno"];
                             $houseno=$_POST["houseno"];
-                            $ration=$_POST["rationno"];
+                            $psw=$_POST["psw"];
 
-                            $ins="INSERT INTO `registration`(`fname`, `email`, `phno`, `wardno`, `houseno`, `rationno`) VALUES ('$name','$email',' $phno','$wardno',' $houseno',' $ration')";
+                            $ins="INSERT INTO `registration`(`fname`, `email`, `phno`, `wardno`, `houseno`, `password`) VALUES ('$name','$email',' $phno','$wardno',' $houseno',' $psw')";
                             mysqli_query($conn,$ins);
                         }
                     ?>
-                    <form action="#" method="post" enctype="multipart/form-data">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <div class="inputs">
                             <div class="input">
                                 <div class="label">
@@ -129,9 +129,9 @@
                             </div>
                             <div class="input">
                                 <div class="label">
-                                    Ration number
+                                    Password
                                 </div>
-                                <input type="text" name="rationno" id="" placeholder="2547863214">
+                                <input type="password" name="psw" id="" placeholder="Password">
                             </div>
                             <div class="button">
                                 <input type="submit" name="reg" value="Register" class="primary-button">
