@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+        include './assets/includes/dbcon.php';
+        ?> 
     <h1>Logedin</h1>
-    <button>Logout</button>
+    <a href="logout.php">Logout</a>
+    
 </body>
 </html>

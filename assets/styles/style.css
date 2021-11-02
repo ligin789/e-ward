@@ -158,7 +158,9 @@
 }
 
 .main .sections .form .box .inputs .input input[type="text"],
-.main .sections .form .box .inputs .input input[type="password"] {
+.main .sections .form .box .inputs .input input[type="password"],
+.main .sections .form .box .inputs .input input[type="email"],
+.main .sections .form .box .inputs .input input[type="number"] {
   width: 100%;
   font-size: 18px;
   font-family: "Gilroy_M";
@@ -172,7 +174,9 @@
 }
 
 .main .sections .form .box .inputs .input input[type="text"]:focus,
-.main .sections .form .box .inputs .input input[type="password"]:focus {
+.main .sections .form .box .inputs .input input[type="password"]:focus,
+.main .sections .form .box .inputs .input input[type="email"]:focus,
+.main .sections .form .box .inputs .input input[type="number"]:focus {
   border: 1px solid #1e1e1e;
 }
 
@@ -418,7 +422,9 @@
 }
 
 .box2 .inputs .input input[type="text"],
-.box2 .inputs .input input[type="password"] {
+.box2 .inputs .input input[type="password"],
+.box2 .inputs .input input[type="email"],
+.box2 .inputs .input input[type="number"] {
   width: 100%;
   font-size: 18px;
   font-family: "Gilroy_M";
@@ -432,7 +438,9 @@
 }
 
 .box2 .inputs .input input[type="text"]:focus,
-.box2 .inputs .input input[type="password"]:focus {
+.box2 .inputs .input input[type="password"]:focus,
+.box2 .inputs .input input[type="email"]:focus,
+.box2 .inputs .input input[type="number"]:focus {
   border: 1px solid #1e1e1e;
 }
 
@@ -463,7 +471,9 @@
 }
 
 .box2 .inputs .half-input .input input[type="text"],
-.box2 .inputs .half-input .input input[type="password"] {
+.box2 .inputs .half-input .input input[type="password"],
+.box2 .inputs .half-input .input input[type="email"],
+.box2 .inputs .half-input .input input[type="number"] {
   width: 100%;
   font-size: 18px;
   font-family: "Gilroy_M";
@@ -477,7 +487,9 @@
 }
 
 .box2 .inputs .half-input .input input[type="text"]:focus,
-.box2 .inputs .half-input .input input[type="password"]:focus {
+.box2 .inputs .half-input .input input[type="password"]:focus,
+.box2 .inputs .half-input .input input[type="email"]:focus,
+.box2 .inputs .half-input .input input[type="number"]:focus {
   border: 1px solid #1e1e1e;
 }
 

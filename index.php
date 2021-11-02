@@ -37,19 +37,20 @@
                             A web-based application for managing your ward.
                         </div>
                     </div>
-                    <form action="#">
+                   
+                    <form action="" method="post" enctype="multipart/form-data">
                         <div class="inputs">
                             <div class="input">
                                 <div class="label">
                                     Username
                                 </div>
-                                <input type="text" name="" id="" placeholder="House no./committe no.">
+                                <input type="text" name="uname" id="" placeholder="House no./committe no." required>
                             </div>
                             <div class="input">
                                 <div class="label">
                                     Password
                                 </div>
-                                <input type="text" name="" id="" placeholder="Password">
+                                <input type="password" name="upsw" id="" placeholder="Password" required>
                             </div>
                         </div>
                         <div class="sub">
@@ -60,7 +61,7 @@
                                 <a href="#" class="forgot">Forgot password?</a>
                         </div>
                         <div class="buttons">
-                            <input type="submit" value="Login" class="primary-button">
+                            <input type="submit" name="login" value="Login" class="primary-button">
                             <div class="or">
                                 <div class="line"></div>
                                 <span>Or</span>
@@ -68,6 +69,36 @@
                             </div>
                             <input type="button" value="Register" id="register" class="secondary-button">
                         </div>
+                        <?php
+                        include './assets/includes/dbcon.php';
+                        if(isset($_POST["login"])){
+                            $un=$_POST["uname"];
+                            $pass=$_POST["upsw"];
+                            $log="SELECT * FROM `registration` WHERE `houseno`=$un AND `password`=$pass";
+                            $query_run=mysqli_query($conn,$log);
+                            $checkLoginCount = mysqli_num_rows($query_run);
+                            echo $checkLoginCount;
+                            if($checkLoginCount==1)
+                            {
+
+                                $_SESSION['username']=$un;
+                                header('location:home.php');
+                                echo"Done";
+                                // if(($un=="admin@gmail.com")){
+                                //     header('location:admin.php');
+                                // }
+                                // else{
+                                //     header('location:home.html');
+                                // }
+                            }
+                            else{
+                                $_SESSION['status']="Invalid Email id Or Password!";
+                                $_SESSION['status_code']="error";
+                                header('location:index.php');
+                                echo"errror";
+                            }
+                        }
+                    ?>
                     </form>
                 </div>
                 <div class="box2">
@@ -99,32 +130,32 @@
                                 <div class="label">
                                     Full name
                                 </div>
-                                <input type="text" name="fname" id="" placeholder="John Doe">
+                                <input type="text" name="fname" id="" placeholder="John Doe" required>
                             </div>
                             <div class="input">
                                 <div class="label">
                                     Email ID
                                 </div>
-                                <input type="text" name="email" id="" placeholder="example@gmail.com">
+                                <input type="email" name="email" id="" placeholder="example@gmail.com" required>
                             </div>
                             <div class="input">
                                 <div class="label">
                                     Phone number
                                 </div>
-                                <input type="text" name="phno" id="" placeholder="9568547512">
+                                <input type="number" name="phno" id="" placeholder="9568547512" required>
                             </div>
                             <div class="half-input">
                                 <div class="input">
                                     <div class="label">
                                         Ward number
                                     </div>
-                                    <input type="text" name="wardno" id="" placeholder="25">
+                                    <input type="number" name="wardno" id="" placeholder="25" required>
                                 </div>
                                 <div class="input">
                                     <div class="label">
                                         House number
                                     </div>
-                                    <input type="text" name="houseno" id="" placeholder="153">
+                                    <input type="number" name="houseno" id="" placeholder="153" required>
                                 </div>
                             </div>
                             <div class="input">
