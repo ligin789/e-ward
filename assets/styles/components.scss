@@ -31,6 +31,7 @@ $subText: #8b8b8b;
 $placeholder: #b1b1b1;
 $border: #c1c1c1;
 $white: #fff;
+$error: #ec0000;
 
 //=============Mixins=================
 
@@ -59,8 +60,16 @@ $white: #fff;
         border: 1px solid $text;
       }
     }
+    .error {
+      position: absolute;
+      margin-top: 84px;
+      color: $error;
+      font-family: "Gilroy_M";
+      font-size: 14px;
+    }
   }
 }
+
 
 //===========Primary Button===========
 @mixin primary_button($width) {

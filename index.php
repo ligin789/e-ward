@@ -70,6 +70,9 @@
                         </div>
                     </form>
                 </div>
+
+                <!-- Registration Form -->
+
                 <div class="box2">
                     <div class="register-text">
                         <div class="title">
@@ -79,48 +82,61 @@
                             Already have an account?<a>Login</a> 
                         </div>
                     </div>
-                    <form action="#">
+                    <form id="reg-form">
                         <div class="inputs">
-                            <div class="input">
+                            <div class="input fullname">
                                 <div class="label">
                                     Full name
                                 </div>
-                                <input type="text" name="" id="" placeholder="John Doe">
+                                <input type="text" name="" id="full-name" placeholder="John Doe">
+                                <div class="error error-hidden">
+                                    
+                                </div>
                             </div>
-                            <div class="input">
+                            <div class="input email">
                                 <div class="label">
                                     Email ID
                                 </div>
-                                <input type="text" name="" id="" placeholder="example@gmail.com">
+                                <input type="text" name="" id="email-id" placeholder="example@gmail.com">
+                                <div class="error error-hidden">
+                                </div>
                             </div>
-                            <div class="input">
+                            <div class="input phno">
                                 <div class="label">
                                     Phone number
                                 </div>
-                                <input type="text" name="" id="" placeholder="9568547512">
+                                <input type="text" name="" id="phn-number" placeholder="9568547512">
+                                <div class="error error-hidden">
+                                </div>
                             </div>
                             <div class="half-input">
-                                <div class="input">
+                                <div class="input wrdno">
                                     <div class="label">
                                         Ward number
                                     </div>
-                                    <input type="text" name="" id="" placeholder="25">
+                                    <input type="text" name="" id="ward-number" placeholder="25">
+                                    <div class="error error-hidden">
+                                    </div>
                                 </div>
-                                <div class="input">
+                                <div class="input houseno">
                                     <div class="label">
                                         House number
                                     </div>
-                                    <input type="text" name="" id="" placeholder="153">
+                                    <input type="text" name="" id="house-number" placeholder="153">
+                                    <div class="error error-hidden">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="input">
+                            <div class="input rationno">
                                 <div class="label">
                                     Ration number
                                 </div>
-                                <input type="text" name="" id="" placeholder="2547863214">
+                                <input type="text" name="" id="ration-number" placeholder="2547863214">
+                                <div class="error error-hidden">
+                                </div>
                             </div>
-                            <div class="button">
-                                <input type="submit" value="Register" class="primary-button">
+                            <div class="button cursor-disable">
+                                <input type="submit" value="Register" id="reg-btn" class="primary-button disabled">
                             </div>
                             <div class="message">
                                 *The login details will be sent to you via email or SMS.
