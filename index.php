@@ -43,13 +43,13 @@
                                 <div class="label">
                                     Username
                                 </div>
-                                <input type="text" name="" id="" placeholder="House no./committe no.">
+                                <input type="text" name="" id="" placeholder="House no./committe no." autocomplete="off">
                             </div>
                             <div class="input">
                                 <div class="label">
                                     Password
                                 </div>
-                                <input type="text" name="" id="" placeholder="Password">
+                                <input type="text" name="" id="" placeholder="Password" autocomplete="off">
                             </div>
                         </div>
                         <div class="sub">
@@ -88,7 +88,7 @@
                                 <div class="label">
                                     Full name
                                 </div>
-                                <input type="text" name="" id="full-name" placeholder="John Doe">
+                                <input type="text" name="" id="full-name" placeholder="John Doe" autocomplete="off">
                                 <div class="error error-hidden">
                                     
                                 </div>
@@ -97,7 +97,7 @@
                                 <div class="label">
                                     Email ID
                                 </div>
-                                <input type="text" name="" id="email-id" placeholder="example@gmail.com">
+                                <input type="text" name="" id="email-id" placeholder="example@gmail.com" autocomplete="off">
                                 <div class="error error-hidden">
                                 </div>
                             </div>
@@ -105,7 +105,7 @@
                                 <div class="label">
                                     Phone number
                                 </div>
-                                <input type="text" name="" id="phn-number" placeholder="9568547512">
+                                <input type="text" name="" id="phn-number" placeholder="9568547512" autocomplete="off">
                                 <div class="error error-hidden">
                                 </div>
                             </div>
@@ -114,7 +114,7 @@
                                     <div class="label">
                                         Ward number
                                     </div>
-                                    <input type="text" name="" id="ward-number" placeholder="25">
+                                    <input type="text" name="" id="ward-number" placeholder="25" autocomplete="off">
                                     <div class="error error-hidden">
                                     </div>
                                 </div>
@@ -122,7 +122,7 @@
                                     <div class="label">
                                         House number
                                     </div>
-                                    <input type="text" name="" id="house-number" placeholder="153">
+                                    <input type="text" name="" id="house-number" placeholder="153" autocomplete="off">
                                     <div class="error error-hidden">
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@
                                 <div class="label">
                                     Ration number
                                 </div>
-                                <input type="text" name="" id="ration-number" placeholder="2547863214">
+                                <input type="text" name="" id="ration-number" placeholder="2547863214" autocomplete="off">
                                 <div class="error error-hidden">
                                 </div>
                             </div>
