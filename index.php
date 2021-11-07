@@ -136,7 +136,7 @@
                                 </div>
                             </div>
                             <div class="button cursor-disable">
-                                <input type="button" value="Register" id="reg-btn" class="primary-button disabled">
+                                <input type="submit" value="Register" id="reg-btn" class="primary-button disabled">
                             </div>
                             <div class="message">
                                 *The login details will be sent to you via email or SMS.
