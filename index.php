@@ -82,13 +82,13 @@
                             Already have an account?<a>Login</a> 
                         </div>
                     </div>
-                    <form id="reg-form">
+                    <form id="reg-form" method="post" enctype="multipart/form-data">
                         <div class="inputs">
                             <div class="input fullname">
                                 <div class="label">
                                     Full name
                                 </div>
-                                <input type="text" name="" id="full-name" placeholder="John Doe" autocomplete="off">
+                                <input type="text" name="fname" id="full-name" placeholder="John Doe" autocomplete="off">
                                 <div class="error error-hidden">
                                     
                                 </div>
@@ -97,7 +97,7 @@
                                 <div class="label">
                                     Email ID
                                 </div>
-                                <input type="text" name="" id="email-id" placeholder="example@gmail.com" autocomplete="off">
+                                <input type="text" name="email" id="email-id" placeholder="example@gmail.com" autocomplete="off">
                                 <div class="error error-hidden">
                                 </div>
                             </div>
@@ -105,7 +105,7 @@
                                 <div class="label">
                                     Phone number
                                 </div>
-                                <input type="text" name="" id="phn-number" placeholder="9568547512" autocomplete="off">
+                                <input type="text" name="phno" id="phn-number" placeholder="9568547512" autocomplete="off">
                                 <div class="error error-hidden">
                                 </div>
                             </div>
@@ -114,7 +114,7 @@
                                     <div class="label">
                                         Ward number
                                     </div>
-                                    <input type="text" name="" id="ward-number" placeholder="25" autocomplete="off">
+                                    <input type="text" name="wrdno" id="ward-number" placeholder="25" autocomplete="off">
                                     <div class="error error-hidden">
                                     </div>
                                 </div>
@@ -122,7 +122,7 @@
                                     <div class="label">
                                         House number
                                     </div>
-                                    <input type="text" name="" id="house-number" placeholder="153" autocomplete="off">
+                                    <input type="text" name="houno" id="house-number" placeholder="153" autocomplete="off">
                                     <div class="error error-hidden">
                                     </div>
                                 </div>
@@ -131,12 +131,12 @@
                                 <div class="label">
                                     Ration number
                                 </div>
-                                <input type="text" name="" id="ration-number" placeholder="2547863214" autocomplete="off">
+                                <input type="text" name="rano" id="ration-number" placeholder="2547863214" autocomplete="off">
                                 <div class="error error-hidden">
                                 </div>
                             </div>
                             <div class="button cursor-disable">
-                                <input type="submit" value="Register" id="reg-btn" class="primary-button disabled">
+                                <input type="submit" value="Register" name="regbtn" id="reg-btn" class="primary-button disabled">
                             </div>
                             <div class="message">
                                 *The login details will be sent to you via email or SMS.
@@ -148,5 +148,28 @@
         </div>
     </section>
     <script src="./assets/js/app.js"></script>
+
+    <!-- Registration form Insertion -->
+    <?php
+        include './assets/include/dbcon.php';
+        
+        if(isset($_POST["regbtn"])){
+            $name=$_POST["fname"];
+            $email=$_POST["email"];
+            $phno=$_POST["phno"];
+            $wardno=$_POST["wrdno"];
+            $houseno=$_POST["houno"];
+            $rationno=$_POST["rano"];
+            $chk = "SELECT * FROM registration WHERE houseno='$houseno'";
+            $res = mysqli_query($conn, $chk);
+            if(mysqli_num_rows($res) > 0){
+                echo"House already registered";
+              }else{
+                $ins="INSERT INTO `registration`(`fname`, `email`, `phno`, `wardno`, `houseno`, `rationno`, `status`) VALUES ('$name','$email',' $phno','$wardno',' $houseno',' $rationno','0')";
+                mysqli_query($conn,$ins);
+              }
+        }
+    ?>
+
 </body>
 </html>
