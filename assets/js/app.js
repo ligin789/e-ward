@@ -22,13 +22,13 @@ logBtn.addEventListener("click",()=>{
 //=============Registeration Form Validation==============
 
 const regForm=document.querySelector("#reg-form");
-const regSubBtn=document.querySelector("#reg-btn");
 const fullName=document.querySelector("#full-name");
 const email=document.querySelector("#email-id");
 const phno=document.querySelector("#phn-number");
 const wardNo=document.querySelector("#ward-number");
 const houseNo=document.querySelector("#house-number");
 const rationNo=document.querySelector("#ration-number");
+const regSubBtn=document.querySelector("#reg-btn");
 
 //Error Message Class
 const fullNameError=document.querySelector(".fullname .error");
@@ -177,3 +177,21 @@ regForm.addEventListener("keyup",()=>{
 });
 
 //========================End============================
+
+
+
+const alertt=document.querySelector(".alertt");
+const alertClose=document.querySelector(".alert-close");
+console.log(alertClose);
+console.log(alertt);
+
+regSubBtn.addEventListener("click",()=>{
+    alertt.classList.remove("alert-hidden");
+    alertt.classList.add("alert-visible");
+    console.log("submit");
+});
+
+alertClose.addEventListener("click",()=>{
+    alertt.classList.remove("alert-visible");
+    alertt.classList.add("alert-hidden");
+});

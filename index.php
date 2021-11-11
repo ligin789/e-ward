@@ -147,6 +147,9 @@
             </div>
         </div>
     </section>
+
+    
+
     <script src="./assets/js/app.js"></script>
 
     <!-- Registration form Insertion -->
@@ -163,13 +166,21 @@
             $chk = "SELECT * FROM registration WHERE houseno='$houseno'";
             $res = mysqli_query($conn, $chk);
             if(mysqli_num_rows($res) > 0){
-                echo"House already registered";
+                // Toast should appear
+                echo '<div class="alertt alert-visible">
+                    <div class="content">
+                        <img src="./assets/images/warning.svg" alt="warning">
+                        <div class="text">
+                            House already registered
+                        </div>
+                    </div>
+                    <img src="./assets/images/close.svg" alt="close" class="alert-close">
+                </div>';
               }else{
                 $ins="INSERT INTO `registration`(`fname`, `email`, `phno`, `wardno`, `houseno`, `rationno`, `status`) VALUES ('$name','$email',' $phno','$wardno',' $houseno',' $rationno','0')";
                 mysqli_query($conn,$ins);
               }
         }
     ?>
-
 </body>
 </html>
