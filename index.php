@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./assets/images/fav.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
     <section class="main">
@@ -122,7 +123,7 @@
                                     <div class="label">
                                         House number
                                     </div>
-                                    <input type="text" name="houno" id="house-number" placeholder="153" autocomplete="off">
+                                    <input type="text" name="houno" id="house-number" placeholder="153" autocomplete="off" onblur="validateHouseNo()">
                                     <div class="error error-hidden">
                                     </div>
                                 </div>
@@ -136,7 +137,7 @@
                                 </div>
                             </div>
                             <div class="button cursor-disable">
-                                <input type="submit" value="Register" name="regbtn" id="reg-btn" class="primary-button disabled">
+                                <input type="button" value="Register" name="regbtn" id="reg-btn" class="primary-button disabled">
                             </div>
                             <div class="message">
                                 *The login details will be sent to you via email or SMS.
@@ -149,38 +150,30 @@
     </section>
 
     
+    <div id="warrning-box"></div>
 
     <script src="./assets/js/app.js"></script>
+    <script>
+        function validateHouseNo()
+        {
+            const houseNo=document.querySelector("#house-number");
+            $.ajax({
+            url:"./auth/auth.php",
+            type:"POST",
+            data:{
+                houseNo:houseNo
+            },
+            success:function(data,status)
+            {
+                //success function
+                $('#warrning-box').html(data);
+            }
+        })
+        }
+        
+    </script>
 
     <!-- Registration form Insertion -->
-    <?php
-        include './assets/include/dbcon.php';
-        
-        if(isset($_POST["regbtn"])){
-            $name=$_POST["fname"];
-            $email=$_POST["email"];
-            $phno=$_POST["phno"];
-            $wardno=$_POST["wrdno"];
-            $houseno=$_POST["houno"];
-            $rationno=$_POST["rano"];
-            $chk = "SELECT * FROM registration WHERE houseno='$houseno'";
-            $res = mysqli_query($conn, $chk);
-            if(mysqli_num_rows($res) > 0){
-                // Toast should appear
-                echo '<div class="alertt alert-visible">
-                    <div class="content">
-                        <img src="./assets/images/warning.svg" alt="warning">
-                        <div class="text">
-                            House already registered
-                        </div>
-                    </div>
-                    <img src="./assets/images/close.svg" alt="close" class="alert-close">
-                </div>';
-              }else{
-                $ins="INSERT INTO `registration`(`fname`, `email`, `phno`, `wardno`, `houseno`, `rationno`, `status`) VALUES ('$name','$email',' $phno','$wardno',' $houseno',' $rationno','0')";
-                mysqli_query($conn,$ins);
-              }
-        }
-    ?>
+    
 </body>
 </html>
